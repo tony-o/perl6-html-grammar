@@ -18,12 +18,7 @@ my $basic = q{
 my $script = q[[[
   <html>
     <head>
-      <script>
-        var a = { a: 5 };
-
-
-
-      </script>
+      <script>        var a = { a: 5 }; </script>
     </head>
   </html>
 ]]];
