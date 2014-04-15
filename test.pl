@@ -15,7 +15,7 @@ my $basic = q{
 </html>
 };
 
-my $script = q[[[
+my $script = q`[[[
   <html>
     <head>
       <script>        var a = { a: 5 }; </script>
