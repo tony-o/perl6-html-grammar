@@ -15,19 +15,20 @@ my $basic = q{
 </html>
 };
 
-my $script = q{
+my $script = q[[[
   <html>
     <head>
       <script>
-        var a = 5;
-        while(a<10){
-          a++;
-        };
+        var a = { a: 5 };
+
+
+
       </script>
     </head>
   </html>
-};
+]]];
 
+$script.say;
 #HTML::Grammar.parse($basic).say;
 HTML::Grammar.parse($script).say;
 

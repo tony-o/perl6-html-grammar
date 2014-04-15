@@ -22,17 +22,12 @@ grammar HTML::Grammar {
   }
 
   rule script {
-    '<script' <attribute>* 
-    [
-      | '/>'
-      | '>' <scriptcontents> '</script>'
-      | '>' <space> '</script>'
-    ]
+    "<script>" <scriptcontents> "</script>" 
   }
 
   rule child {
-    | <element> 
     | <script>
+    | <element> 
     | <text>
   }
 
@@ -45,7 +40,7 @@ grammar HTML::Grammar {
   }
 
   regex scriptcontents {
-    [ . | \r | \n ]+
+    .+ <?before "</script>"> 
   }
 
   token quote {
