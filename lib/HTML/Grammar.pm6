@@ -40,7 +40,7 @@ grammar HTML::Grammar {
   }
 
   regex scriptcontents {
-    .+ <?before "</script>"> 
+    .+? <?before "</script>"> 
   }
 
   token quote {
@@ -53,6 +53,7 @@ grammar HTML::Grammar {
 
   token tag {
     <name>+
+    { $<name>.say; }
     { $<name> ne 'script' }
   }
 

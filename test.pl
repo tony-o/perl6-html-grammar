@@ -15,13 +15,18 @@ my $basic = q{
 </html>
 };
 
-my $script = q`[[[
+my $script = "
   <html>
     <head>
-      <script>        var a = { a: 5 }; </script>
+      <script>
+        var a = { a: 5 }; 
+        
+        
+        
+      </script>
     </head>
   </html>
-]]];
+";
 
 $script.say;
 #HTML::Grammar.parse($basic).say;
